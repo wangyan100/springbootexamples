@@ -12,22 +12,22 @@ You could use ApplicationRunner or CommandLineRunner to do this.  I will use bel
 
 - To initialize the first resource in OrderRunner1
 
- ![orderrun1](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\orderrun1.png)
+ ![orderrun1](./orderrun1.png)
 
 
 
 - To initialize the second resource in OrderRunner2
 
-![orderrun2](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\orderrun2.png)
+![orderrun2](./orderrun2.png)
 
 
 
 - To initialize the third resource in Runner
 
-![runner](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\runner.png)
+![runner](./runner.png)
 
 
 
 - Start the SpringBoot Application, you could see 3 resources are initialized in the expected order.
 
- ![result](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\result.png)![springbootapp](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\springbootapp.png)
+ ![result](./result.png)![springbootapp](./springbootapp.png)

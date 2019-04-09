@@ -1,13 +1,33 @@
-# How to initialize SpringBoot Application's resources in different orders
+# How to initialize SpringBoot Application's resources in defined orders
 
 
 
-Your springboot application will be started from class with @SpringBootApplication , but if your project contains serveal different resources and you need to initialize them in different orders. How to acheive this?
+Your springboot application will be started from class with @SpringBootApplication , but if your project contains serveal different resources and you need to initialize them in defined orders. How to do this?
 
 
 
-You could use ApplicationRunner or CommandLineRunner to do this.  I will use below example to show you how to do this.
+You could use ApplicationRunner or CommandLineRunner to do this.  I will use below example to show you how to do initialize 3 resources in defined orders
 
- 
 
- 
+
+- To initialize the first resource in OrderRunner1
+
+ ![orderrun1](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\orderrun1.png)
+
+
+
+- To initialize the second resource in OrderRunner2
+
+![orderrun2](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\orderrun2.png)
+
+
+
+- To initialize the third resource in Runner
+
+![runner](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\runner.png)
+
+
+
+- Start the SpringBoot Application, you could see 3 resources are initialized in the expected order.
+
+ ![result](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\result.png)![springbootapp](D:\Users\yanwang\projects\test\springbootexamples\spring-boot-applicationRunner\doc\springbootapp.png)

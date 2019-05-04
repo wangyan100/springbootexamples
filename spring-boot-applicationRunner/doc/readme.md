@@ -2,7 +2,7 @@
 
 
 
-Your springboot application will be started from class with @SpringBootApplication , but if your project contains serveal different resources and you need to initialize them in defined orders. How to archieve this?
+Your springboot application will be started from class with @SpringBootApplication , but if your project contains several different resources and you need to initialize them in defined orders. How to archieve this?
 
 
 

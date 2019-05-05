@@ -14,13 +14,13 @@ and you can also remove caching by SpringBoot's scheuduled  task
 
 - enable Caching on SpringBoot Application
 
-  ![Screenshot 2019-05-05 at 10.41.02](./doc/Screenshot 2019-05-05 at 10.41.02.png)
+  ![Screenshot 2019-05-05 at 10.41.02](doc/Screenshot 2019-05-05 at 10.41.02.png)
 
 
 
 - put results into cache on Dao Implementation 
 
-  ![Screenshot 2019-05-05 at 11.08.03](./doc/Screenshot 2019-05-05 at 11.08.03.png)
+  ![Screenshot 2019-05-05 at 11.08.03](doc/Screenshot 2019-05-05 at 11.08.03.png)
 
 
 
@@ -28,13 +28,13 @@ and you can also remove caching by SpringBoot's scheuduled  task
 
   
 
-  ![Screenshot 2019-05-05 at 11.17.43](./doc/Screenshot 2019-05-05 at 11.17.43.png)
+  ![Screenshot 2019-05-05 at 11.17.43](doc/Screenshot 2019-05-05 at 11.17.43.png)
 
 
 
 - enable scheudle on SpringBoot Application, and inject the CacheManager
 
-  ![Screenshot 2019-05-05 at 11.27.31](./doc/Screenshot 2019-05-05 at 11.27.31.png)
+  ![Screenshot 2019-05-05 at 11.27.31](doc/Screenshot 2019-05-05 at 11.27.31.png)
 
 
 
@@ -42,7 +42,7 @@ and you can also remove caching by SpringBoot's scheuduled  task
 
 - start  your SpringBoot Application, after cache is cleared, results will be retrieved not from cache.  
 
-![Screenshot 2019-05-05 at 11.37.22](/Users/yanwang/project/springbootexamples/spring-boot-cache/doc/Screenshot 2019-05-05 at 11.37.22.png)
+![Screenshot 2019-05-05 at 11.37.22](doc/Screenshot 2019-05-05 at 11.37.22.png)
 
 
 

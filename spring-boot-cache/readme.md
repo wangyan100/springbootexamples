@@ -1,14 +1,10 @@
 # SpringBoot Cache
 
-This guide walks you through the process of enabling caching 
-
-and the process of removing caching on a Spring managed bean
+This guide walks you through the process of enabling caching and the process of removing caching on a Spring managed bean.
 
 ## What you’ll build
 
-You’ll build an application that enables caching  on a simple book repository.
-
-and you can also remove caching by SpringBoot's scheuduled  task  
+You’ll build an application that enables caching  on a simple book repository, and you can also remove caching by SpringBoot's scheuduled  task .
 
 
 
@@ -32,7 +28,7 @@ and you can also remove caching by SpringBoot's scheuduled  task
 
 
 
-- enable scheudle on SpringBoot Application, and inject the CacheManager
+- enable scheudle on SpringBoot Application, and inject the CacheManager.
 
   ![Screenshot 2019-05-05 at 11.27.31](doc/screenshot4.png)
 

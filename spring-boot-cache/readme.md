@@ -14,7 +14,7 @@ and you can also remove caching by SpringBoot's scheuduled  task
 
 - enable Caching on SpringBoot Application
 
-  ![Screenshot 2019-05-05 at 10.41.02](doc/Screenshot 2019-05-05 at 10.41.02.png)
+  ![Screenshot 2019-05-05 at 10.41.02](./doc/Screenshot 2019-05-05 at 10.41.02.png)
 
 
 

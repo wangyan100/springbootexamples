@@ -23,7 +23,8 @@ public class AppRunner implements CommandLineRunner {
         bookRepository.getByIsbn("isbn-1234");
         bookRepository.getByIsbn("isbn-4567");
         long end=System.currentTimeMillis();
-         logger.info("spend " + (end-start)/1000 +" seconds " + "to get Book isbn-1234 and isbn-4567");
+        logger.info("spend " + (end-start)/1000 +" seconds " + "to get Book isbn-1234 and isbn-4567");
+
 
     }
 

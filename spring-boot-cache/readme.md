@@ -36,7 +36,7 @@ You’ll build an application that enables caching  on a simple book repository,
 
 - define Scheudled Task to clear cache regularly. ![Screenshot 2019-05-05 at 11.32.36](./doc/screenshot5.png)
 
-- start  your SpringBoot Application, after cache is cleared, results will be retrieved not from cache.  
+- start  your SpringBoot Application, after cache is cleared, results will not be retrieved from cache.  
 
 ![Screenshot 2019-05-05 at 11.37.22](doc/screenshot6.png)
 

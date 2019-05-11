@@ -4,6 +4,7 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
     }
 }
 
@@ -22,10 +23,18 @@ repositories {
     mavenCentral()
 }
 
+dependencyManagement {
+    imports {
+        mavenBom 'software.amazon.awssdk:bom:2.0.0'
+    }
+}
+
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-cache")
+    compile 'software.amazon.awssdk:kinesis'
 }
 

@@ -16,3 +16,4 @@ https://www.elastic.co/cn/downloads/elasticsearch
 - install it and run it, after it starts successfully, you could browse it like blow
 
 ![screenshot1](doc/screenshot1.png)
+

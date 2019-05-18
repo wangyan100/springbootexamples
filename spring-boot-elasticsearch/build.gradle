@@ -14,6 +14,9 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot', name: 'spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+	implementation 'org.elasticsearch:elasticsearch'
+	implementation 'org.elasticsearch.client:transport'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

@@ -1,5 +1,6 @@
 package org.yw.springbootelasticsearch.controller;
 
+
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
@@ -18,6 +19,7 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.yw.springbootelasticsearch.model.Handy;
@@ -53,6 +55,7 @@ public class HandyController {
     public Map<String, Object> view(@PathVariable final String id) {
         GetResponse getResponse = client.prepareGet("handys", "handy", id).get();
         System.out.println(getResponse.getSource());
+        System.out.println(getResponse.getSource());
         return getResponse.getSource();
     }
 
@@ -61,7 +64,7 @@ public class HandyController {
         Map<String, Object> map = null;
         SearchResponse response = client.prepareSearch("handys")
                 .setTypes("handy")
-                .setSearchType(SearchType.QUERY_AND_FETCH)
+                .setSearchType(SearchType.QUERY_THEN_FETCH)
                 .setQuery(QueryBuilders.matchQuery("brand", field))
                 .get();
         List<SearchHit> searchHits = Arrays.asList(response.getHits().getHits());

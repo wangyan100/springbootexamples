@@ -24,6 +24,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.yw.springbootelasticsearch.model.Handy;
 import org.yw.springbootelasticsearch.model.Handy;
+import org.yw.springbootelasticsearch.model.User;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
@@ -36,6 +37,7 @@ public class HandyController {
     Client client;
 
     @PostMapping("/create")
+    @ResponseBody
     public String create(@RequestBody Handy handy) throws IOException {
 
         IndexResponse response = client.prepareIndex("handys", "handy", handy.getId())
@@ -52,14 +54,17 @@ public class HandyController {
 
 
     @GetMapping("/view/{id}")
+    @ResponseBody
     public Map<String, Object> view(@PathVariable final String id) {
         GetResponse getResponse = client.prepareGet("handys", "handy", id).get();
-        System.out.println(getResponse.getSource());
         System.out.println(getResponse.getSource());
         return getResponse.getSource();
     }
 
+
+
     @GetMapping("/view/brand/{field}")
+    @ResponseBody
     public Map<String, Object> searchByName(@PathVariable final String field) {
         Map<String, Object> map = null;
         SearchResponse response = client.prepareSearch("handys")
@@ -74,6 +79,7 @@ public class HandyController {
     }
 
     @GetMapping("/update/{id}")
+    @ResponseBody
     public String update(@PathVariable final String id) throws IOException {
 
         UpdateRequest updateRequest = new UpdateRequest();
@@ -95,6 +101,7 @@ public class HandyController {
     }
 
     @GetMapping("/delete/{id}")
+    @ResponseBody
     public String delete(@PathVariable final String id) {
 
         DeleteResponse deleteResponse = client.prepareDelete("handys", "handy", id).get();

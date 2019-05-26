@@ -12,18 +12,18 @@ https://www.elastic.co/cn/downloads/elasticsearch
 
 - install it and run it, after it starts successfully, you could browse it like blow
 
-![screenshot1](./doc/screenshot1.png)
+![screenshot1](./doc/Screenshot1.png)
 
 ###  ElasticsearchRepository CRUD 
 - Create a SpringBoot Rest Application and set config for ElasticsearchRepository 
  
-![screenshot2](./doc/screenshot2.png)
+![screenshot2](./doc/Screenshot2.png)
 
 - Add User as Data model 
-![screenshot3](./doc/screenshot3.png)
+![screenshot3](./doc/Screenshot3.png)
 
 - Add UserRepository as Data Repository
-![screenshot4](./doc/screenshot3.png)
+![screenshot4](./doc/Screenshot3.png)
 
 - Add UserController which autowiring UserRepository to
 implement CRUD functionality 
@@ -31,13 +31,13 @@ implement CRUD functionality
 - Test ElasticsearchRepository CRUD functionality via REST 
 
   Add user
-![screenshot5](./doc/screenshot5.png)
+![screenshot5](./doc/Screenshot5.png)
 
   List user
-![screenshot6](./doc/screenshot6.png)
+![screenshot6](./doc/Screenshot6.png)
 
   Delete user
-![screenshot7](./doc/screenshot7.png)
+![screenshot7](./doc/Screenshot7.png)
 
 
 

@@ -1,4 +1,5 @@
 package org.yw.springbootelasticsearch.controller;
+
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,9 +51,12 @@ public class UserController {
     @ResponseBody
     public String deleteUser(@PathVariable final String id) {
 
-        userRepository.deleteById(id);
-
-        return "delete User with id: "+id;
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            userRepository.deleteById(id);
+            return " delete User with id: " + id;
+        } else {
+            return "User with id:" + id + " does not exist!";
+        }
     }
-
 }

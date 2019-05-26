@@ -1,16 +1,15 @@
 ## Getting Started
 
 This Example shows you how to use
-ElasticsearchTemplate ,  ElasticsearchRepository , (both of them using TransportClient) to implement ad CRUD SpringBoot Application
+ElasticsearchRepository , TransportClient to implement an SpringBoot + Elasticsearch CRUD Application
 
 
 ## Install elasticsearch 6.4.3 
 
-
-* Download elasticsearch  6.4.3 (for spring2.1.4)
+- Download elasticsearch  6.4.3 (for spring2.1.4)
 https://www.elastic.co/cn/downloads/elasticsearch
 
-- install it and run it, after it starts successfully, you could browse it like blow
+- Install it and run it, after it starts successfully, you could browse it like blow
 
 ![screenshot1](./doc/Screenshot1.png)
 
@@ -19,14 +18,13 @@ https://www.elastic.co/cn/downloads/elasticsearch
  
 ![screenshot2](./doc/Screenshot2.png)
 
-- Add User as Data model 
+- Add User as data model 
 ![screenshot3](./doc/Screenshot3.png)
 
 - Add UserRepository as Data Repository
 ![screenshot4](./doc/Screenshot3.png)
 
-- Add UserController which autowiring UserRepository to
-implement CRUD functionality 
+- Add UserController which autowiring UserRepository to implement CRUD functionality 
 
 - Test ElasticsearchRepository CRUD functionality via REST 
 
@@ -39,8 +37,16 @@ implement CRUD functionality
   Delete user
 ![screenshot7](./doc/Screenshot7.png)
 
+### Implement CRUD with TransportClient
 
+- Set config for TransportClient
+![screenshot8](./doc/Screenshot8.png)
 
+- Define Handy as data model 
+![screenshot9](./doc/Screenshot9.png)
+
+- Create HandyController which autowiring Client to implement CRUD functionality 
+![screenshot10](./doc/Screenshot10.png)
 
 ### Additional Links
 These additional references should also help you:

@@ -15,21 +15,20 @@ https://www.elastic.co/cn/downloads/elasticsearch
 ![screenshot1](doc/screenshot1.png)
 
 ###  ElasticsearchRepository CRUD 
-- Create a SpringBoot Rest Application
-Configure setting for ElasticsearchRepository 
+- Create a SpringBoot Rest Application and set config for ElasticsearchRepository 
  
 ![screenshot2](doc/screenshot2.png)
 
 - Add User as Data model 
 ![screenshot3](doc/screenshot3.png)
 
-- Add UserRepository as Data Depository
+- Add UserRepository as Data Repository
 ![screenshot4](doc/screenshot3.png)
 
-- Add UserControler which autowires UserRepository to
+- Add UserController which autowiring UserRepository to
 implement CRUD functionality 
 
-- Test ElasticsearchRepository CRUD 
+- Test ElasticsearchRepository CRUD functionality via REST 
 
   Add user
 ![screenshot5](doc/screenshot5.png)

@@ -15,6 +15,8 @@ import java.net.UnknownHostException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
 @SpringBootApplication
 public class SpringBootElasticsearchApplication {
@@ -36,6 +38,11 @@ public class SpringBootElasticsearchApplication {
             e.printStackTrace();
         }
         return client;
+    }
+
+    @Bean
+    public ElasticsearchOperations elasticsearchOperations() throws Exception {
+        return new ElasticsearchTemplate(client());
     }
 
     public static void main(String[] args) {

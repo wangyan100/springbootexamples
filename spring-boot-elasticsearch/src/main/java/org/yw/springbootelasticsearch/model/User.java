@@ -1,7 +1,31 @@
 package org.yw.springbootelasticsearch.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
+@Document(indexName = "wangyan", type = "books")
 public class User {
+    @Id
+    private String id;
     private String name;
+    private String age;
+    private String job;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
 
     public String getName() {
         return name;
@@ -11,13 +35,6 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public String getJob() {
         return job;
@@ -27,7 +44,15 @@ public class User {
         this.job = job;
     }
 
-    private int age;
-    private String job;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", job='" + job + '\'' +
+                '}';
+    }
 
 }

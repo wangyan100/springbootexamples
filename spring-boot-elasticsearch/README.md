@@ -48,6 +48,15 @@ https://www.elastic.co/cn/downloads/elasticsearch
 - Create HandyController which autowiring Client to implement CRUD functionality 
 ![screenshot10](./doc/Screenshot10.png)
 
+- Add Handy
+![screenshot11](./doc/Screenshot11.png)
+
+- View Handy
+![screenshot12](./doc/Screenshot12.png)
+
+- Delete Handy
+![screenshot13](./doc/Screenshot13.png)
+
 ### Additional Links
 These additional references should also help you:
 

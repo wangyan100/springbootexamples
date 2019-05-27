@@ -103,9 +103,7 @@ public class HandyController {
     @GetMapping("/delete/{id}")
     @ResponseBody
     public String delete(@PathVariable final String id) {
-
         DeleteResponse deleteResponse = client.prepareDelete("handys", "handy", id).get();
-
         System.out.println(deleteResponse.getResult().toString());
         return deleteResponse.getResult().toString();
     }

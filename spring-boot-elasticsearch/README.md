@@ -13,49 +13,52 @@ https://www.elastic.co/cn/downloads/elasticsearch
 
 ![screenshot1](./doc/Screenshot1.png)
 
-###  ElasticsearchRepository CRUD 
+###  Implement ElasticsearchRepository CRUD 
 - Create a SpringBoot Rest Application and set config for ElasticsearchRepository 
  
 ![screenshot2](./doc/Screenshot2.png)
 
-- Add User as data model 
+- Create User as data model 
 ![screenshot3](./doc/Screenshot3.png)
 
-- Add UserRepository as Data Repository
+- Create UserRepository
 ![screenshot4](./doc/Screenshot3.png)
 
-- Add UserController which autowiring UserRepository to implement CRUD functionality 
+- Create UserController which autowiring UserRepository to implement CRUD functionality 
 
-- Test ElasticsearchRepository CRUD functionality via REST 
+- Test ElasticsearchRepository CRUD functionality via REST (Postman)
 
-  Add user
+    - Add user operation
 ![screenshot5](./doc/Screenshot5.png)
 
-  List user
+    - List user operation
 ![screenshot6](./doc/Screenshot6.png)
 
-  Delete user
+    - Delete user operation
 ![screenshot7](./doc/Screenshot7.png)
 
-### Implement CRUD with TransportClient
+### Implement Elasticsearch TransportClient CRUD 
 
 - Set config for TransportClient
 ![screenshot8](./doc/Screenshot8.png)
 
-- Define Handy as data model 
+- Create Handy as data model 
 ![screenshot9](./doc/Screenshot9.png)
 
 - Create HandyController which autowiring Client to implement CRUD functionality 
 ![screenshot10](./doc/Screenshot10.png)
 
-- Add Handy
+- Test Elasticsearch TransportClient CRUD functionality via REST (Postman)
 ![screenshot11](./doc/Screenshot11.png)
 
-- View Handy
+    - Add Handy operation
 ![screenshot12](./doc/Screenshot12.png)
 
-- Delete Handy
+    - View Handy operation
 ![screenshot13](./doc/Screenshot13.png)
+
+    - Delete Handy operation
+![screenshot14](./doc/Screenshot14.png)
 
 ### Additional Links
 These additional references should also help you:

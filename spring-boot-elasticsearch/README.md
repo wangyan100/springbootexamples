@@ -60,33 +60,17 @@ https://www.elastic.co/cn/downloads/elasticsearch
     - Delete Handy operation
 ![screenshot14](./doc/Screenshot14.png)
 
-### Additional Links
-These additional references should also help you:
+### Additional Links for reference
 
-- Elastic Search 
-https://cloud.tencent.com/developer/article/1066239 
 
-https://github.com/RajeshBhojwani/spring-boot-elasticsearch
+- https://cloud.tencent.com/developer/article/1066239 
 
-https://dzone.com/articles/elasticsearch-with-spring-boot-application
+- https://github.com/RajeshBhojwani/spring-boot-elasticsearch
 
-https://dzone.com/articles/spring-boot-elasticsearch
-https://github.com/RajeshBhojwani/spring-boot-standalone-elasticsearch/blob/master/src/main/java/com/example/elasticsearch/controller/UserController.java
+- https://dzone.com/articles/elasticsearch-with-spring-boot-application
 
-https://piotrminkowski.wordpress.com/2019/03/29/elasticsearch-with-spring-boot/
+- https://dzone.com/articles/spring-boot-elasticsearch
 
-http://localhost:8080/rest/handys/create
+- https://github.com/RajeshBhojwani/spring-boot-standalone-elasticsearch/blob/master/src/main/java/com/example/elasticsearch/controller/UserController.java
 
-http://localhost:8080/rest/handys/view/001
-Content-Type 
-application/json
-
-{
-  "id":"001",
-  "brand": "XiaoMi",
-   "details": {
-   "model" : "m8",
-   "price" : "300 USD",
-   "color" : "black"
-   }
-}
+- https://piotrminkowski.wordpress.com/2019/03/29/elasticsearch-with-spring-boot/

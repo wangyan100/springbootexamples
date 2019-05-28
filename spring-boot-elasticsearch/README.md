@@ -22,10 +22,10 @@ https://www.elastic.co/cn/downloads/elasticsearch
 ![screenshot3](./doc/Screenshot3.png)
 
 - Create UserRepository
-![screenshot4](./doc/Screenshot3.png)
+![screenshot4](./doc/Screenshot4.png)
 
 - Create UserController which autowiring UserRepository to implement CRUD functionality 
-
+![screenshot4.1](./doc/Screenshot4.1.png)
 - Test ElasticsearchRepository CRUD functionality via REST (Postman)
 
     - Add user operation

@@ -5,3 +5,4 @@
 
 - ##### [SpringBoot Cache](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-cache/readme.md)
 
+- ##### [SpringBoot+ElastichSearch](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-elasticsearch/README.md)

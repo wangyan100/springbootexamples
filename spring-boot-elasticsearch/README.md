@@ -1,6 +1,6 @@
 ## Getting Started
 
-This Example shows you how to use
+This example shows you how to use
 ElasticsearchRepository , TransportClient to implement a SpringBoot + Elasticsearch CRUD Application
 
 

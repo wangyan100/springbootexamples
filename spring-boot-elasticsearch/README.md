@@ -1,7 +1,7 @@
 ## Getting Started
 
 This Example shows you how to use
-ElasticsearchRepository , TransportClient to implement an SpringBoot + Elasticsearch CRUD Application
+ElasticsearchRepository , TransportClient to implement a SpringBoot + Elasticsearch CRUD Application
 
 
 ## Install elasticsearch 6.4.3 

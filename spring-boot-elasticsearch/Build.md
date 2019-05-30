@@ -7,9 +7,10 @@
 ## deployment on k8s
 
 - requirment 
-  - install Install elasticsearch 6.4.3  on minikube pod
+  - install elasticsearch 6.4.3  on minikube pod
   - install springboot app (docker image yan/springbootels ) on minikube pod
-
+  - springboot app should be able to communicate with elastichsearch 
+  - user should be able to communication with springboot and elasticsearch via REST call
 
 - current setup
   - virtualbox 

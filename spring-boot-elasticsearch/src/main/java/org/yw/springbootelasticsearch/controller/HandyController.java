@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.binder.MeterBinder;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexResponse;
@@ -31,10 +34,17 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
 @Controller
 @RequestMapping("/rest/handys")
-public class HandyController {
+public class HandyController implements MeterBinder {
 
     @Autowired
     Client client;
+
+    private Counter handyCounter = null;
+
+    @Override
+    public void bindTo(MeterRegistry meterRegistry) {
+        this.handyCounter = meterRegistry.counter("handy.count");
+    }
 
     @PostMapping("/create")
     @ResponseBody
@@ -49,6 +59,7 @@ public class HandyController {
                 )
                 .get();
         System.out.println("response id:" + response.getId());
+        handyCounter.increment();
         return response.getResult().toString();
     }
 
@@ -107,5 +118,4 @@ public class HandyController {
         System.out.println(deleteResponse.getResult().toString());
         return deleteResponse.getResult().toString();
     }
-
 }

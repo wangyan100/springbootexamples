@@ -2,9 +2,7 @@
 
 ### Spring Boot Actuator 
 
-This article shows you how to use Spring Boot Actuator to monitor your Application.
-
-We will use SpringBoot+ElastichSearch as example , you can get all source code  at below link .
+This article shows you how to use Spring Boot Actuator to monitor your Application. We will use SpringBoot+ElasticSearch as example , you can get all source code  at below link .
 https://github.com/wangyan100/springbootexamples/tree/master/spring-boot-elasticsearch 
 
 Spring Boot's Actuator provides many production-level features such as monitoring and measuring Spring Boot applications. These features of Actuator are available through numerous REST interfaces, remote shells, and JMX.

@@ -19,7 +19,7 @@ Spring Boot's Actuator provides many production-level features such as monitorin
   ![2](./screenshot/2.png)
   
 - start elastichsearch and SpringBootApplication, you could use Actuator as below to monitor Application running status as below shown
-  ![3](./screenshot/3.png)$$
+  ![3](./screenshot/3.png)
   
 - it shows application info
   ![4](./screenshot/4.png)
@@ -33,7 +33,7 @@ Spring Boot's Actuator provides many production-level features such as monitorin
 - create handyCounter, when create new handy method is called, handyCounter increases 1
   ![6](./screenshot/6.png)
   
-- to using Postmann to call REST API to call create new handy method
+- use Postmann to call REST API to call create new handy method
   ![7](./screenshot/7.png)
   
 - browse actuator prometheus endpoint, you can see handyCounter is 1 now

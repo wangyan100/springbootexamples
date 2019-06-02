@@ -32,12 +32,16 @@ Spring Boot's Actuator provides many production-level features such as monitorin
 - create handyCounter, when create new handy method is called, handyCounter increases 1
   ![6](./screenshot/6.png)
   
-- use Postmann to call REST API to call create new handy method
+- use Postman to call REST API to call create new handy method
   ![7](./screenshot/7.png)
   
 - browse actuator prometheus endpoint, you can see handyCounter is 1 now
   ![8](./screenshot/8.png)
+  
+#### implement your own indicator to reflect Application health status
+- create HandyIndicator, define Health Up and Health down based on handy numbers 
+  ![9](./screenshot/9.png)
 
-
-
+- use Postman to call create new handy method, then browse HandyIndicator Health status as below shown
+  ![10](./screenshot/10.png)
 

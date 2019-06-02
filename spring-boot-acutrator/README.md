@@ -20,7 +20,7 @@ Spring Boot's Actuator provides many production-level features such as monitorin
 - start elastichsearch and SpringBootApplication, you could use Actuator as below to monitor Application running status as below shown
   ![3](./screenshot/3.png)
   
-- it shows application info
+- it shows application info, which is configured at application.properties
   ![4](./screenshot/4.png)
     
 - it shows elasticsearch status , diskspace and so on. 

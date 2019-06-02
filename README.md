@@ -7,4 +7,4 @@
 
 - ##### [SpringBoot+ElastichSearch](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-elasticsearch/README.md)
 
-- ##### [SpringBoot Acutrator](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-acutrator/README.md) 
+- ##### [SpringBoot Actuator](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-actuator/README.md) 

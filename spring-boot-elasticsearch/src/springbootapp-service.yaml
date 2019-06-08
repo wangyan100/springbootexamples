@@ -1,0 +1,27 @@
+apiVersion: apps/springbootelastic
+kind: Deployment
+metadata:
+  name: springbootelastic
+spec:
+  selector:
+    matchLabels:
+      run: springbootelastic
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: springbootelastic
+    spec:
+      containers:
+        - name: springbootelastic
+          image: wangyan100/springbootelastic:latest
+          imagePullPolicy: Always
+          env:
+            #- name: SERVER_URL
+            #  value: jdbc:postgresql://100.66.104.225:5432/xiaobaobaodb
+            #- name: SERVER_USR
+            #  value: postgres
+            #- name: SERVER_PWD
+            #  value: abcd1234
+      imagePullSecrets:
+        - name: regcred

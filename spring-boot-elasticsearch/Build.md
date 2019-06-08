@@ -11,7 +11,7 @@
 - docker tag <image_id> wangyan100/springbootelastic:latest 
 - docker push wangyan100/springbootelastic:latest
 
-## deployment on k8s
+## deployment on k8s(minikube locally)
 
 - requirement 
   - install elasticsearch 6.4.3  on minikube pod

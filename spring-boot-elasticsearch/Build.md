@@ -1,8 +1,15 @@
 
 ## docker build 
 - gradle clean build 
-- docker build -t yan/springbootels .
-- docker run -p 8080:8080 yan/springbootels
+- docker build -t wangyan100/springbootelastic .
+- docker run -p 8080:8080 wangyan100/springbootelastic
+
+## push docker image (wangyan100/springbootelastic) to docker hub
+- create wangyan100/springbootelastic as repository at docker hub website, of course you need register an account at docker hub website
+- docker login
+  - enter docker hub's username and password 
+- docker tag <image_id> wangyan100/springbootelastic:latest 
+- docker push wangyan100/springbootelastic:latest
 
 ## deployment on k8s
 

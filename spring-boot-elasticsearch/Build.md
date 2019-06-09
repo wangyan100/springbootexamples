@@ -1,8 +1,10 @@
 
 ## docker build 
 - gradle clean build 
-- docker build -t wangyan100/springbootelastic .
-- docker run -p 8080:8080 wangyan100/springbootelastic
+- docker build  -t wangyan100/springbootelastic --build-arg CLUSTER_NODES=192.168.1.199:9300 --build-arg CLUSTER_HOST=192.168.1.199 .
+or 
+- docker build  -t wangyan100/springbootelastic . 
+- docker run -e CLUSTER_NODES=192.168.1.199:9300 -e CLUSTER_HOST=192.168.1.199 -p 8080:8080 wangyan100/springbootelastic
 
 ## push docker image (wangyan100/springbootelastic) to docker hub
 - create wangyan100/springbootelastic as repository at docker hub website, of course you need register an account at docker hub website

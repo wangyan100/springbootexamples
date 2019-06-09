@@ -31,8 +31,16 @@
   - kubectl config use-context minikube
   - kubectl cluster-info
   - kubectl create -f springbootapp-deployment.yaml (deployment )
+  - kubectl apply -f <dir_of_yaml_files>
   - kubectl get deployments (check deployment successful or not)
+  - kubectl get pod
   - kubectl logs <pod id> (check logs)
+  
+  - kubectl describe service springbootelastic
+  
+  - minikube service
+  
+  - http://<IP>:30009/actuator
   
 - question how to deploy service yaml?
   

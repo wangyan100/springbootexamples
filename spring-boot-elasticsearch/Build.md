@@ -24,5 +24,22 @@
   - minikube
   - minikube addons enable ingress
   - kubernetes-helm 
+  
+- deploy on minikube
+  - minikube start
+  - minikube config set vm-driver virtualbox
+  - kubectl config use-context minikube
+  - kubectl cluster-info
+  - kubectl create -f springbootapp-deployment.yaml (deployment )
+  - kubectl get deployments (check deployment successful or not)
+  - kubectl logs <pod id> (check logs)
+  
+- question how to deploy service yaml?
+  
 
--https://hackernoon.com/local-kubernetes-setup-with-minikube-on-mac-os-x-eeeb1cbdc0b 
+
+
+https://www.baeldung.com/spring-boot-minikube
+https://hackernoon.com/local-kubernetes-setup-with-minikube-on-mac-os-x-eeeb1cbdc0b
+
+https://docs.docker.com/engine/reference/commandline/container_ls/ 

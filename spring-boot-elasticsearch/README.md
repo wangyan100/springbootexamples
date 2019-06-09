@@ -68,7 +68,7 @@ https://www.elastic.co/cn/downloads/elasticsearch
 - https://github.com/RajeshBhojwani/spring-boot-elasticsearch
 
 - https://dzone.com/articles/elasticsearch-with-spring-boot-application
-
+- https://stackoverflow.com/questions/53830713/expose-service-to-minikube-with-yaml-file
 - https://dzone.com/articles/spring-boot-elasticsearch
 
 - https://github.com/RajeshBhojwani/spring-boot-standalone-elasticsearch/blob/master/src/main/java/com/example/elasticsearch/controller/UserController.java

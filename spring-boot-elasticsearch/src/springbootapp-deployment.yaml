@@ -17,11 +17,9 @@ spec:
           image: wangyan100/springbootelastic:latest
           imagePullPolicy: Always
           env:
-          #- name: SERVER_URL
-          #  value: jdbc:postgresql://100.66.104.225:5432/xiaobaobaodb
-          #- name: SERVER_USR
-          #  value: postgres
-          #- name: SERVER_PWD
-          #  value: abcd1234
+            - name: CLUSTER_NODES
+              value: 192.168.99.1:9300
+            - name: CLUSTER_HOST
+              value: 192.168.99.1
       #imagePullSecrets:
       #  - name: regcred

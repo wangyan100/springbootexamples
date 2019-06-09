@@ -30,6 +30,7 @@
   - minikube config set vm-driver virtualbox
   - kubectl config use-context minikube
   - kubectl cluster-info
+  - kubectl create -f elasticsearch-deployment.yaml 
   - kubectl create -f springbootapp-deployment.yaml (deployment )
   - kubectl apply -f <dir_of_yaml_files>
   - kubectl get deployments (check deployment successful or not)

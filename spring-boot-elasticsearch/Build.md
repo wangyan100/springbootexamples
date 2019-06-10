@@ -45,8 +45,10 @@ or
   - kubectl get service
   - minikube service <service_name>
   
-  - http://<IP>:<8080>/actuator
+  - http://<IP>:<NODE_PORT>/actuator
   
+  minikube service springbootelastic --url
+
 - question how to deploy service yaml?
 - in deployment yaml, you need to replace value for CLUSTER_NODES and CLUSTER_HOST
   
@@ -66,3 +68,5 @@ https://www.baeldung.com/spring-boot-minikube
 https://hackernoon.com/local-kubernetes-setup-with-minikube-on-mac-os-x-eeeb1cbdc0b
 
 https://docs.docker.com/engine/reference/commandline/container_ls/ 
+
+https://juejin.im/post/5ab61075f265da23a2290ff8

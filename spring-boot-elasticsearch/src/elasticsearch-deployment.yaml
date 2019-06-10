@@ -13,8 +13,11 @@ spec:
         run: elasticsearch
     spec:
       containers:
-        - name: elasticsearch
-          image: docker.elastic.co/elasticsearch/elasticsearch:6.4.3
+        - image: docker.elastic.co/elasticsearch/elasticsearch:6.4.3
+          name: elasticsearch
           imagePullPolicy: Always
+          ports:
+          - containerPort: 9200
+            name: elasticsearch
       #imagePullSecrets:
       #  - name: regcred

@@ -8,8 +8,8 @@ spec:
   ports:
     - port: 8080
       protocol: TCP
-      nodePort: 30009
-  type: NodePort
+      targetPort: 8080
+  #type: NodePort
 
   selector:
     run: springbootelastic

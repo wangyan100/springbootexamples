@@ -38,17 +38,27 @@ or
   - kubectl get deployments (check deployment successful or not)
   - kubectl get pod
   - kubectl logs <pod id> (check logs)
-  
+  - kubectl delete pods <pod id>
+  - kubectl delete deployment <label name>
   - kubectl describe service springbootelastic
+  - kubectl get service
+  - minikube service <service_name>
   
-  - minikube service
-  
-  - http://<IP>:30009/actuator
+  - http://<IP>:<8080>/actuator
   
 - question how to deploy service yaml?
   
 
+11
 
+Simply call this command.
+
+1/Get all available services:
+
+kubectl get service -o wide
+2/ Then you can delete any services like this:
+
+kubectl delete svc <YourServiceName>
 
 https://www.baeldung.com/spring-boot-minikube
 https://hackernoon.com/local-kubernetes-setup-with-minikube-on-mac-os-x-eeeb1cbdc0b

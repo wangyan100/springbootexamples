@@ -48,6 +48,7 @@ or
   - http://<IP>:<8080>/actuator
   
 - question how to deploy service yaml?
+- in deployment yaml, you need to replace value for CLUSTER_NODES and CLUSTER_HOST
   
 
 11

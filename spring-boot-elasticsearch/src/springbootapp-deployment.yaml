@@ -18,8 +18,8 @@ spec:
           imagePullPolicy: Always
           env:
             - name: CLUSTER_NODES
-              value: 192.168.1.199:9300
+              value: elasticsearch:9300
             - name: CLUSTER_HOST
-              value: 192.168.1.199
+              value: elasticsearch
       #imagePullSecrets:
       #  - name: regcred

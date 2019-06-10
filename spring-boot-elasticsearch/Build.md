@@ -41,7 +41,7 @@ or
   - kubectl logs <pod id> (check logs)
   - kubectl delete pods <pod id>
   - kubectl delete deployment <label name>
-  - kubectl describe service springbootelastic
+  - kubectl describe service/springbootelastic
   - kubectl get service
   - minikube service <service_name>
   
@@ -70,3 +70,4 @@ https://hackernoon.com/local-kubernetes-setup-with-minikube-on-mac-os-x-eeeb1cbd
 https://docs.docker.com/engine/reference/commandline/container_ls/ 
 
 https://juejin.im/post/5ab61075f265da23a2290ff8
+https://chekkan.com/setting-up-elasticsearch-cluster-on-kubernetes-part-3-config-file/

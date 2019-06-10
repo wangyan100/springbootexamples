@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: elasticsearch
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,8 +16,13 @@ spec:
         - image: docker.elastic.co/elasticsearch/elasticsearch:6.4.3
           name: elasticsearch
           imagePullPolicy: Always
+          env:
+            - name: discovery.type
+              value: single-node
           ports:
+          - containerPort: 9300
+            name: nodes
           - containerPort: 9200
-            name: elasticsearch
+            name: client
       #imagePullSecrets:
       #  - name: regcred

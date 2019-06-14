@@ -28,7 +28,7 @@ or
   - kubernetes-helm 
   
 - deploy on minikube
-  - minikube start
+  - minikube start --memory 4096
   - minikube config set vm-driver virtualbox
   - kubectl config use-context minikube
   - kubectl cluster-info

@@ -19,27 +19,37 @@ public class HandyIndicator implements HealthIndicator {
 
     @Autowired
     Client client;
+
     @Override
     public Health health() {
-        SearchResponse response = client.prepareSearch("handys")
-                .setTypes("handy")
-                .setSearchType(SearchType.QUERY_THEN_FETCH)
-                .setQuery(QueryBuilders.matchAllQuery())
-                .get();
-        List<SearchHit> searchHits = Arrays.asList(response.getHits().getHits());
-        int handyCount=searchHits.size();
         Health health;
-        if (handyCount > 0) {
-            health = Health.up()
-                    .withDetail("count", handyCount)
-                    .withDetail("message", "We have enough Handys.")
-                    .build();
-        } else {
+        try {
+            SearchResponse response = client.prepareSearch("handys")
+                    .setTypes("handy")
+                    .setSearchType(SearchType.QUERY_THEN_FETCH)
+                    .setQuery(QueryBuilders.matchAllQuery())
+                    .get();
+            List<SearchHit> searchHits = Arrays.asList(response.getHits().getHits());
+            int handyCount = searchHits.size();
+
+            if (handyCount > 0) {
+                health = Health.up()
+                        .withDetail("count", handyCount)
+                        .withDetail("message", "We have enough Handys.")
+                        .build();
+            } else {
+                health = Health.down()
+                        .withDetail("count", 0)
+                        .withDetail("message", "We have no enough Handys.")
+                        .build();
+            }
+            return health;
+        } catch (Exception e) {
             health = Health.down()
                     .withDetail("count", 0)
                     .withDetail("message", "We have no enough Handys.")
                     .build();
+            return health;
         }
-        return health;
     }
 }

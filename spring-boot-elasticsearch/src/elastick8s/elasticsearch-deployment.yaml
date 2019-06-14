@@ -19,6 +19,8 @@ spec:
           env:
             - name: discovery.type
               value: single-node
+            - name: cluster.name
+              value: elasticsearch
           ports:
           - containerPort: 9300
             name: nodes

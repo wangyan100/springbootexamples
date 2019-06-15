@@ -8,3 +8,5 @@
 - ##### [SpringBoot+ElastichSearch](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-elasticsearch/README.md)
 
 - ##### [SpringBoot Actuator](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-actuator/README.md) 
+
+- ##### [SpringBoot kubernetes](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-k8s/readme.md) 

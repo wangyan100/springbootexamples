@@ -12,8 +12,7 @@ the demo will use the SpringBootApplication from [this link](https://github.com/
 
 #### Push docker image (wangyan100/springbootelastic) to docker hub
 
-- create wangyan100/springbootelastic as repository at [docker hub](https://hub.docker.com/) website, of course you need register an account at docker hub website, if you dont have one
-
+- create wangyan100/springbootelastic as repository at docker hub website, of course, you need register an account at docker hub website if you don't have one
 - docker login
 
 - enter docker hub's username and password 

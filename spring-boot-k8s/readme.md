@@ -1,8 +1,8 @@
 ### Deploy SpringBootApplication and ElasticSearch on Kubernetes
 
-This demo will show you how to deploy a SpringBoot Application and ElasticSearch on Kubernetes.
+This demo will show you how to deploy  SpringBootApplication and ElasticSearch on Kubernetes.
 
-the demo will use the SpringBoot Application from [this link](https://github.com/wangyan100/springbootexamples/tree/master/spring-boot-elasticsearch)
+the demo will use the SpringBootApplication from [this link](https://github.com/wangyan100/springbootexamples/tree/master/spring-boot-elasticsearch)
 
 #### Build docker image
 
@@ -24,7 +24,7 @@ the demo will use the SpringBoot Application from [this link](https://github.com
 
 #### Write deployment and service yaml files 
 
-- for springboot application, you could find example as below 
+- for SpringBootApplication, you could find example as below 
   ![1](doc/01.png)
   
 - for elasticsearch, you could find example as below shown
@@ -50,7 +50,7 @@ the demo will use the SpringBoot Application from [this link](https://github.com
    NAME                                 READY   STATUS    RESTARTS   
    elasticsearch-5b74bbdd86-wgw2n       1/1     Running   0        
    ```
-- deploy springboot application
+- deploy SpringBootApplication
 
     ```
     cd spring-boot-elasticsearch/src/springbootk8s
@@ -67,7 +67,7 @@ the demo will use the SpringBoot Application from [this link](https://github.com
     http://192.168.99.113:32663
     ```
     
-- use postman to send request to springboot application, it will create an entry at elasticsearch
+- use postman to send request to SpringBootApplication, it will create an entry at elasticsearch
   ![3](doc/03.png)
 
 - check result, it works 

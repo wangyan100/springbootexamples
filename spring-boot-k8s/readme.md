@@ -1,8 +1,8 @@
 ### Deploy SpringBootApplication and ElasticSearch on Kubernetes
 
-This demo will show you how to deploy an SpringBoot Application and ElastichSearch on Kubernates.
+This demo will show you how to deploy an SpringBoot Application and ElasticSearch on Kubernetes.
 
-the demo will use the SpringBootApplication from [this link](https://github.com/wangyan100/springbootexamples/tree/master/spring-boot-elasticsearch)
+the demo will use the SpringBoot Application from [this link](https://github.com/wangyan100/springbootexamples/tree/master/spring-boot-elasticsearch)
 
 #### Build docker image
 
@@ -12,7 +12,7 @@ the demo will use the SpringBootApplication from [this link](https://github.com/
 
 #### Push docker image (wangyan100/springbootelastic) to docker hub
 
-- create wangyan100/springbootelastic as repository at docker hub website, of course you need register an account at docker hub website, if you dont have one
+- create wangyan100/springbootelastic as repository at [docker hub](https://hub.docker.com/) website, of course you need register an account at docker hub website, if you dont have one
 
 - docker login
 
@@ -34,7 +34,7 @@ the demo will use the SpringBootApplication from [this link](https://github.com/
 
 - follow [the link](https://kubernetes.io/docs/tasks/tools/install-minikube/) to install kubernetes on your local pc
 
-#### Deploy Application on Kubernates
+#### Deploy Application on Kubernetes
 
 - minikube start --memory 4096 (elasticsearch requires 4GB memory)
 

@@ -1,6 +1,6 @@
 ### Deploy SpringBootApplication and ElasticSearch on Kubernetes
 
-This demo will show you how to deploy an SpringBoot Application and ElasticSearch on Kubernetes.
+This demo will show you how to deploy a SpringBoot Application and ElasticSearch on Kubernetes.
 
 the demo will use the SpringBoot Application from [this link](https://github.com/wangyan100/springbootexamples/tree/master/spring-boot-elasticsearch)
 

@@ -21,5 +21,7 @@ spec:
               value: elasticsearch:9300
             - name: CLUSTER_HOST
               value: elasticsearch
+            - name: REST_URI
+              value: elasticsearch:9200
       #imagePullSecrets:
       #  - name: regcred

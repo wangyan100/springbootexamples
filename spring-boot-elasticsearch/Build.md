@@ -69,3 +69,4 @@ https://docs.docker.com/engine/reference/commandline/container_ls/
 https://juejin.im/post/5ab61075f265da23a2290ff8
 https://chekkan.com/setting-up-elasticsearch-cluster-on-kubernetes-part-3-config-file/
 https://lernentec.com/post/running-simple-elasticsearch-kibana-minikube/
+https://continuous.lu/2017/04/28/minikube-and-helm-kubernetes-package-manager/

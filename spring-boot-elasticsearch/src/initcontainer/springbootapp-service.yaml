@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springbootelastic
+  labels:
+    run: springbootelastic
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  type: NodePort
+
+  selector:
+    run: springbootelastic

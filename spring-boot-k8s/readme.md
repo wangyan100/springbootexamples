@@ -66,16 +66,16 @@ the demo will use the SpringBootApplication from [this link](https://github.com/
     http://192.168.99.113:32663
     ```
     
-- use postman to send request to SpringBootApplication, it will create an entry at elasticsearch
+- use postman to send request to SpringBootApplication, it will create an entry at ElasticSearch
   ![3](doc/03.png)
 
 - check result, it works 
   ![4](doc/04.png)
   
-- last but not least, you could use init container to define dependency since SpringBootApplication should be deployed after elasticsearch running
+- last but not least, you could use init container to define dependency because SpringBootApplication should be deployed after ElasticSearch running
   ![5](doc/05.png)
   
-- deploy by using initcontainer, as you can see, SpringBootApplication is deployed after elasticsearch is running
+- deploy by using initcontainer, as you can see, SpringBootApplication is deployed after ElasticSearch is running
     ```
     cd spring-boot-elasticsearch/src/initcontainer
     kubectl apply -f . 

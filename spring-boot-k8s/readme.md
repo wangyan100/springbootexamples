@@ -72,7 +72,7 @@ the demo will use the SpringBootApplication from [this link](https://github.com/
 - check result, it works 
   ![4](doc/04.png)
   
-- last but not least, you could use init container to define dependency since SpringBootApplication should be deployed after elasticsearch
+- last but not least, you could use init container to define dependency since SpringBootApplication should be deployed after elasticsearch running
   ![5](doc/05.png)
   
 - deploy by using initcontainer, as you can see, SpringBootApplication is deployed after elasticsearch is running

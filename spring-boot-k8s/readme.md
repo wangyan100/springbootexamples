@@ -76,11 +76,11 @@ the demo will use the SpringBootApplication from [this link](https://github.com/
   ![5](doc/05.png)
   
 - deploy by using initcontainer, as you can see, SpringBootApplication is deployed after ElasticSearch is running
-    ```
-    cd spring-boot-elasticsearch/src/initcontainer
-    kubectl apply -f . 
-    ```
-    ![6](doc/06.png)
+  ```
+  cd spring-boot-elasticsearch/src/initcontainer
+  kubectl apply -f . 
+  ```
+  ![6](doc/06.png)
    
 
 

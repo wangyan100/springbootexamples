@@ -10,3 +10,5 @@
 - ##### [SpringBoot Actuator](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-actuator/README.md) 
 
 - ##### [SpringBoot kubernetes](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-k8s/readme.md) 
+
+- ##### [SpringBoot Autoconfiguration](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-autoconfig/readme.md) 

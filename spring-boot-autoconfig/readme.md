@@ -1,9 +1,9 @@
 
 
-### Implement your own auto configuration 
+### Implement your own SpringBoot starter for auto configuration 
 
 SpringBoot starter is a core component. For example, if you use spring-boot-starter-web, then a lot of 
-configurationes for web application will be done automaically for you. If you use spring-boot-starter-activemq, then a lot of activemq configuration will be done automatically as well.
+configurations for web application will be done automatically for you. 
 
 When you use starter component, you don't need to do much about configuration, if there are some special configuration, you could just add them in application properties, then starter component can handle them correctly.
 
@@ -54,10 +54,10 @@ You basically just need do 5 things
 - add your springboot starter into the SpringBoot application
   ![7](doc/7.png)
   
-- add properties into the SpringBoot application's application.properties
+- add properties of auto configured Service class into the SpringBoot application's application.properties
   ![8](doc/8.png)
   
-- use aut configured Service class in the SpringBoot application as below shown
+- use auto configured Service class in the SpringBoot application as below shown
   ![9](doc/9.png)
   
 - run the SpringBoot application, it works

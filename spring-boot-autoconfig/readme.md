@@ -5,7 +5,7 @@
 SpringBoot starter is a core component. For example, if you use spring-boot-starter-web, then a lot of 
 configurations for web application will be done automatically for you. 
 
-When you use starter component, you don't need to do much about configuration, if there are some special configuration, you could just add them in application properties, then starter component can handle them correctly.
+When you use starter component, you don't need to do much about configuration, you could just add properties in the application.properties file, then starter component can handle them correctly.
 
 Here we use a demo to show you how to implement your own springboot starter to do auto configuration.
 

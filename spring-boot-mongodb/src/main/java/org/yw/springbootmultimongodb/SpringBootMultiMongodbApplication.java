@@ -1,13 +1,13 @@
-package org.yw.springbootmongodb;
+package org.yw.springbootmultimongodb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootMongodbApplication {
+public class SpringBootMultiMongodbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootMongodbApplication.class, args);
+		SpringApplication.run(SpringBootMultiMongodbApplication.class, args);
 	}
 
 }

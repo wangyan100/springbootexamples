@@ -15,7 +15,7 @@ spec:
       containers:
         - name: springbootelastic
           image: wangyan100/springbootelastic:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           env:
             - name: CLUSTER_NODES
               value: elasticsearch:9300

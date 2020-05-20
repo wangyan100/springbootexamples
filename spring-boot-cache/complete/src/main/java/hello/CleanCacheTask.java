@@ -3,6 +3,7 @@ package hello;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -18,9 +19,12 @@ public class CleanCacheTask {
                         cacheManager.getCache(cacheName).clear());
     }
 
-    @Scheduled(fixedRate = 12000)
+    @Value("${clean.cache.miliseconds}")
+    String cleanCacheRate;
+
+    @Scheduled(fixedRateString = "${clean.cache.miliseconds}")
     public void cacheEvictionScheduler() {
-        logger.info("every 12 seconds, evicting all entries from Cache .");
+        logger.info("every {} seconds, evicting all entries from Cache .",cleanCacheRate);
         evictAllCaches();
     }
 }

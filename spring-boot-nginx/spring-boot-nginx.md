@@ -2,7 +2,7 @@
 
 In this example, we show you how to deploy SpringBoot as Service with Nginx Reverse Proxy setting.
 
-By this approach, you could just run SpringBoot as a stand alone application, and forward http request to it via Nginx. 
+By this approach, you could just run SpringBoot as a stand-alone application, and forward http request to it via Nginx. 
 
 We assume you are using Ubutun, with JDK and Nginx installed already.
 

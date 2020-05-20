@@ -25,7 +25,7 @@ We assume you are using Ubutun, with JDK and Nginx installed already.
   
   ```
 
-#### Config Reverse Proxy
+### Config Reverse Proxy
 
 - Nginx config to map forward the request upstream to the SpringBoot Application
 
@@ -58,6 +58,8 @@ server {
   
   ```
 
-  #### As you can see, it is working. 
+  
+
+  ### As you can see, it is working! 
 
   ![image-20200520214007042](spring-boot-nginx.assets/image-20200520214007042.png)

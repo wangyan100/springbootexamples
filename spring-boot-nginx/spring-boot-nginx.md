@@ -37,9 +37,9 @@ We assume you are using Ubutun, with JDK and Nginx installed already.
 server {
         listen 80;
         listen [::]:80;
-				# here you could also use subdomain
+				#here you could also use subdomain
         server_name example.com;
-        # here you could also use context, e.g  location /<context>
+        #here you could also use context, e.g. location /<context>
         location / {
              proxy_pass http://localhost:8080/;
              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

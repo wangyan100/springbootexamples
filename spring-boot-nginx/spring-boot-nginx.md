@@ -52,8 +52,8 @@ server {
         listen 443;
         server_name example.com;
         ssl on;
-        ssl_certificate /usr/local/nginx/ssl/example.com.crt;        
-        ssl_certificate_key /usr/local/nginx/ssl/example.com.pem;
+        ssl_certificate /usr/local/nginx/ssl/example_com.crt;        
+        ssl_certificate_key /usr/local/nginx/ssl/example_com.pem;
         ssl_session_cache shared:SSL:1m;
         ssl_session_timeout 5m;
         ssl_ciphers  HIGH:!aNULL:!MD5;

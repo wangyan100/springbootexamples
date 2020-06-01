@@ -71,30 +71,89 @@ spring.redis.lettuce.pool.min-idle=0
 
 ```
 
-- add Cache config
+
+
+- to manually store key and value into Redis Cache and fetch it 
 
 ```
-@Configuration
-@EnableCaching
-public class RedisConfig extends CachingConfigurerSupport{
+@RunWith(SpringRunner.class)
+@SpringBootTest
+class SpringbootRedisDemoApplicationTests {
+	@Autowired
+	private StringRedisTemplate stringRedisTemplate;
+	@Autowired
+	private RedisTemplate redisTemplate;
 
-    //define your own KeyGenerator to avoid the problem caused by different package with same params may have same key
-    @Bean
-    public KeyGenerator keyGenerator() {
-        return new KeyGenerator() {
-            @Override
-            public Object generate(Object target, Method method, Object... params) {
-                StringBuilder sb = new StringBuilder();
-                sb.append(target.getClass().getName());
-                sb.append(method.getName());
-                for (Object obj : params) {
-                    sb.append(obj.toString());
-                }
-                System.out.println("keyGenerator is invoked, key ->  "+sb.toString());
-                return sb.toString();
-            }
-        };
-    }
+	@Test
+	public void testForStringValue() throws Exception {
+		stringRedisTemplate.opsForValue().set("key111", "value111");
+		Assert.assertEquals("value111", stringRedisTemplate.opsForValue().get("key111"));
+	}
+
+	@Test
+	public void testForObjValue() throws Exception {
+		User user=new User("user1@email.com", "nicknameaaa", "aapassword", "useraaa","2020-05-30");
+		ValueOperations<String, User> operations=redisTemplate.opsForValue();
+		//save user with key useraaa
+		operations.set("useraaa", user);
+		//save user with key useraaa_x with timeout
+		operations.set("useraaa_x", user,1, TimeUnit.SECONDS);
+
+		// sleep time is longer than timeout
+		Thread.sleep(2000);
+
+		//key without timeout still exists
+		if(redisTemplate.hasKey("useraaa")){
+			System.out.println("key useraaa exists");
+		}
+        // key with timeout does not exist anymore
+		if(redisTemplate.hasKey("useraaa_x")){
+			System.out.println("key useraaa_x exists");
+		}
+		//fetch user based on key
+		Assert.assertEquals("useraaa", operations.get("useraaa").getUserName());
+	}
 }
 
 ```
+
+- at Spring Controller, automatically store object to Redis cache and fetch it 
+
+  - add RedisConfig 
+  ```
+  @Configuration
+  @EnableCaching
+  public class RedisConfig extends CachingConfigurerSupport{
+  
+      //define your own KeyGenerator to avoid the problem caused by different package with same params may have same key
+      @Bean
+      public KeyGenerator keyGenerator() {
+          return new KeyGenerator() {
+              @Override
+              public Object generate(Object target, Method method, Object... params) {
+                  StringBuilder sb = new StringBuilder();
+                  sb.append(target.getClass().getName());
+                  sb.append(method.getName());
+                  for (Object obj : params) {
+                      sb.append(obj.toString());
+                  }
+                  System.out.println("keyGenerator is invoked, key ->  "+sb.toString());
+                  return sb.toString();
+              }
+          };
+      }
+  }
+  ```
+  
+  - use @Cacheable at controller method to store Object into Redis Cache and retrieve it later on
+  ```
+      @RequestMapping("/getUser")
+      @Cacheable(value="user-key")
+      public User getUser() {
+          User user=new User("useremail@email.org", "nickname", "password", "name","2020-05-30");
+          System.out.println("If this line is not printed out, it means user is fetched from cache");
+          return user;
+      }
+  ```
+  
+  

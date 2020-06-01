@@ -145,7 +145,7 @@ class SpringbootRedisDemoApplicationTests {
   }
   ```
   
-  - use @Cacheable at controller method to store Object into Redis Cache and retrieve it later on
+  - use @Cacheable at controller method to store Object into Redis Cache
   ```
       @RequestMapping("/getUser")
       @Cacheable(value="user-key")
@@ -156,4 +156,54 @@ class SpringbootRedisDemoApplicationTests {
       }
   ```
   
+####  Session sharing
+On distributed System, there are many way for Session sharing, here we use redis to manage and share the session
+Spring session offers clustered session which could use Redis to store session data as Session sharing solution.
+
+- add dependency 
+```
+<dependency>
+    <groupId>org.springframework.session</groupId>
+    <artifactId>spring-session-data-redis</artifactId>
+</dependency
+```
+
+- Session configuration
+      
+  ```
+    @Configuration
+    @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400*30)
+        public class SessionConfig {
+    }
+  ```
   
+  > maxInactiveIntervalInSeconds: to set expired period for session. After using Redis,
+   server.session.timeout will not take effects anymore. 
+                                                                                                                                                                                   
+- Test  
+  add Test method to get sessionid 
+   
+  ```
+  @RequestMapping("/uid")
+  String uid(HttpSession session) {
+      UUID uid = (UUID) session.getAttribute("uid");
+      if (uid == null) {
+          uid = UUID.randomUUID();
+      }
+      session.setAttribute("uid", uid);
+      return session.getId();
+  }
+  ```                
+  
+  access Redis, type keys '*sessions*'                                                                                                                                                                  
+  ![image](readme.assets/2.png)      
+  First line is session expired time, second line is sessionid, it is same as http://localhost:8080/uid      
+  it means Redis already manages the session effectively 
+  ![image](readme.assets/3.png)   
+  
+  #### How to share session between two or more Applications    
+  You just need to repeat above session configuration in another application.
+  
+                                                                                                                                                                   
+                                                                                                                                                                                   
+

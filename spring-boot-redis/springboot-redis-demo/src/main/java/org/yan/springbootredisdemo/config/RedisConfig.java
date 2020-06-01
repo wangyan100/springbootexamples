@@ -16,7 +16,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport{
 
-    //define your own keygenerator for improvement to avoid different package with same params may have same key
+    //define your own KeyGenerator to avoid the problem caused by different package with same params may have same key
     @Bean
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {

@@ -1,7 +1,7 @@
 ## SpringBoot with Redis Demo
 
-Through this demo, I will show you how to integrate SpringBoot with Redis and how to use redis in Spring
-Application for store data in Redis cache and how to use Redis for SpringBoot Web application's session managment
+By this demo, I will show you how to integrate SpringBoot with Redis, how to use redis for caching and session data sharing in
+SprinBoot.
  
  
 #### Set up Redis 

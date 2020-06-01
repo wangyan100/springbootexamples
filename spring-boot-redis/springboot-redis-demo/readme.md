@@ -23,4 +23,5 @@ ping
 ```
 
 - if you see as below screenshot, your redis is ready to use ...
+
  ![image](readme.assets/1.png)

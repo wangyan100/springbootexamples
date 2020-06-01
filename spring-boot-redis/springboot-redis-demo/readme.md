@@ -29,24 +29,24 @@ ping
 #### Set up SpringBoot with Redis 
 - add dependency, spring-boot-starter-data-redis depends on spring-data-redis and lettuce which is redis client.
 it is a scalable, its' Redis Connection could be shared by many threads.
-```
-                <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-pool2</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-data-redis</artifactId>
-		</dependency>
 
+```
+  <dependency>
+	 <groupId>org.springframework.boot</groupId>
+	 <artifactId>spring-boot-starter-data-redis</artifactId>
+  </dependency>
+  <dependency>
+	 <groupId>org.apache.commons</groupId>
+	 <artifactId>commons-pool2</artifactId>
+  </dependency>
+  <dependency>
+	 <groupId>org.springframework.boot</groupId>
+	 <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+  <dependency>
+	 <groupId>org.springframework.session</groupId>
+	 <artifactId>spring-session-data-redis</artifactId>
+  </dependency>
 ```
 
 - add SpringBoot Redis config

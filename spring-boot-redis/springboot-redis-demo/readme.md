@@ -26,6 +26,7 @@ ping
 
  ![image](readme.assets/1.png)
  
+#### Set up SpringBoot with Redis 
 - add dependency 
 ```
 

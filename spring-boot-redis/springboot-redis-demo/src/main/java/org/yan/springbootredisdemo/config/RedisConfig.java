@@ -14,7 +14,6 @@ import org.springframework.context.annotation.Configuration;
 public class RedisConfig extends CachingConfigurerSupport{
 
     //define your own KeyGenerator to avoid the problem caused by different package with same params may have same key
-
     @Bean
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {

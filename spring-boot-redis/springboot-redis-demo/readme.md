@@ -195,7 +195,8 @@ Spring session offers clustered session which could use Redis to store session d
   }
   ```                
   
-  access Redis, type keys '*sessions*'                                                                                                                                                                  
+  access Redis, type keys '*sessions*'      
+                                                                                                                                                              
   ![image](readme.assets/2.png)      
   First line is session expired time, second line is sessionid, it is same as http://localhost:8080/uid      
   it means Redis already manages the session effectively 

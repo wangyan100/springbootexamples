@@ -1,9 +1,8 @@
 ## SpringBoot with Redis Demo
 
-By this demo, I will show you how to integrate SpringBoot with Redis, how to use redis for caching and session data sharing in
-SprinBoot.
- 
- 
+By this demo, I will show you how to integrate SpringBoot with Redis, how to use redis for caching and session data sharing in SprinBoot.
+
+
 #### Set up Redis 
 - run redis locally via docker 
 ```
@@ -25,7 +24,7 @@ ping
 - if you see as below screenshot, your redis is ready to use ...
 
  ![image](readme.assets/1.png)
- 
+
 #### Set up SpringBoot with Redis 
 - add dependency, spring-boot-starter-data-redis depends on spring-data-redis and lettuce which is redis client.
 it is a scalable, its' Redis Connection could be shared by many threads.
@@ -157,7 +156,7 @@ class SpringbootRedisDemoApplicationTests {
   ```
   
 ####  Session sharing
-On distributed System, there are many way for Session sharing, here we use redis to manage and share the session
+On distributed System, there are many ways for Session sharing, here we use redis to manage and share the session
 Spring session offers clustered session which could use Redis to store session data as Session sharing solution.
 
 - add dependency 
@@ -179,10 +178,10 @@ Spring session offers clustered session which could use Redis to store session d
   
   > maxInactiveIntervalInSeconds: to set expired period for session. After using Redis,
    server.session.timeout will not take effects anymore. 
-                                                                                                                                                                                   
-- Test  
+  
+- Test 
   add Test method to get sessionid 
-   
+  
   ```
   @RequestMapping("/uid")
   String uid(HttpSession session) {
@@ -193,18 +192,19 @@ Spring session offers clustered session which could use Redis to store session d
       session.setAttribute("uid", uid);
       return session.getId();
   }
-  ```                
+  ```
   
   access Redis, type keys '*sessions*'      
                                                                                                                                                               
   ![image](readme.assets/2.png)      
+  
   First line is session expired time, second line is sessionid, it is same as http://localhost:8080/uid      
-  it means Redis already manages the session effectively 
+  , which means Redis already manages the session effectively 
   ![image](readme.assets/3.png)   
   
   #### How to share session between two or more Applications    
   You just need to repeat above session configuration in another application.
   
-                                                                                                                                                                   
-                                                                                                                                                                                   
+  
+  ​                                                                                                                                                                                 
 

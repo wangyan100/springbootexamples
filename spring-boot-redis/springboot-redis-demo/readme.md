@@ -105,7 +105,7 @@ class SpringbootRedisDemoApplicationTests {
 		if(redisTemplate.hasKey("useraaa")){
 			System.out.println("key useraaa exists");
 		}
-    // key with timeout does not exist anymore
+    //key with timeout does not exist anymore
 		if(redisTemplate.hasKey("useraaa_x")){
 			System.out.println("key useraaa_x exists");
 		}

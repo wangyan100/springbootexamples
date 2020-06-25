@@ -13,5 +13,7 @@
 
 - ##### [SpringBoot Autoconfiguration](https://github.com/wangyan100/springbootexamples/blob/master/spring-boot-autoconfig/readme.md) 
 
-- [SpringBoot+Nginx](./spring-boot-nginx/spring-boot-nginx.md)
+- **[SpringBoot+Nginx](./spring-boot-nginx/spring-boot-nginx.md)**
+
+- **[SpringBoot+Redis](./spring-boot-redis/springboot-redis-demo/readme.md)**
 

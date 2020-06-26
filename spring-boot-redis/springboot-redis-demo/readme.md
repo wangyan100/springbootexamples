@@ -1,6 +1,6 @@
 ## SpringBoot with Redis Demo
 
-![image-20200626081529389](./readme.assets/image-20200626081529389.png)
+![image-20200626081529389](readme.assets/image-20200626081529389.png)
 
 By this demo, I will show you how to integrate SpringBoot with Redis, how to use Redis for caching and session data sharing in the SprinBoot Application.
 

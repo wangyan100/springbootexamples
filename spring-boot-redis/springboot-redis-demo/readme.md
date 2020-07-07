@@ -17,6 +17,15 @@ docker run -d  --name redisHostPort -p 6379:6379 redis:latest
 docker exec -it f67eac82c1f0 /bin/bash
 ```
 
+
+
+- docker container list , start  
+
+```shell
+docker ps -l
+docker <continaer_Id> start
+```
+
 - check redis 
 ```
 redis-cli 

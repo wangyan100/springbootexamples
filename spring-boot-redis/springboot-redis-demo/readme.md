@@ -23,7 +23,7 @@ docker exec -it f67eac82c1f0 /bin/bash
 
 ```shell
 docker ps -l
-docker <continaer_Id> start
+docker start <continaer_Id> 
 ```
 
 - check redis 

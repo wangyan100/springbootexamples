@@ -1,8 +1,5 @@
 # 秒杀系统
 
-- 作者  **小陈** 
-- 微信 **chenxu521600**
-- B站 **编程不良人**|**百知教育**
 - 资料 http://www.baizhiedu.xin
 
 ## 1. 秒杀系统
@@ -218,6 +215,24 @@ jmeter -n -t [jmx file](jmx压力测试文件) -l [results file](结果输出的
 ```
 
 ----
+
+#### 4.1  Jmeter Gui
+
+![image-20200708115434034](readme.assets/image-20200708115434034.png)
+
+
+
+![image-20200708115452771](readme.assets/image-20200708115452771.png)
+
+
+
+
+
+![image-20200708115519314](readme.assets/image-20200708115519314.png)
+
+
+
+![image-20200708115537461](readme.assets/image-20200708115537461.png)
 
 ### 2.6 乐观锁解决商品超卖问题
 

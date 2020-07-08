@@ -16,6 +16,7 @@ import org.springframework.util.DigestUtils;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -76,11 +77,15 @@ public class OrderServiceImpl implements OrderService {
         //生成hashkey
         String hashKey = "KEY_"+userid+"_"+id;
         //生成md5//这里!QS#是一个盐 随机生成
-        String key = DigestUtils.md5DigestAsHex((userid+id+"!Q*jS#").getBytes());
+
+        String key = DigestUtils.md5DigestAsHex((userid+id+UUID.randomUUID().toString()).getBytes());
         stringRedisTemplate.opsForValue().set(hashKey, key, 120, TimeUnit.SECONDS);
 
-        log.info("Redis写入：[{}] [{}]", hashKey, key);
+        //4ce927ce5a58ebdbeeb50f85c221ba65
+        // 616d486b1410244d72df8d70b920849d
+        log.info("Redis写入 120 秒过期 ：[{}] [{}]", hashKey, key);
         return key;
+
     }
 
 
